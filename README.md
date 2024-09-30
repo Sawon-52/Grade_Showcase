@@ -26,14 +26,27 @@ This project is a simple grade showcasing landing page built using **React**. It
 ## Setup Instructions
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/Sawon-52/Grade_Showcase.git
 
+   ```
+
 2. Navigate into the project directory:
+
+   ```bash
    cd Grade_Showcase
-   
-3. Install dependencies: 
-   npm install 
+
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+
+   ```
 
 4. Start the development server:
+   ```bash
    npm run dev
+   ```
