@@ -1,59 +1,68 @@
-export default function Table() {
-  return (
-    <div>
-      <div className="max-w-[848px] mx-auto overflow-auto text-white">
-        <table className="w-full">
-          <thead>
-            <tr className="border-b border-[#FFFFFF0D]">
-              <th className="uppercase p-5 text-sm md:text-xl font-semibold md:min-w-[110px] text-left">ID</th>
-              <th className="p-5 text-sm md:text-xl font-semibold text-left">Name</th>
-              <th className="p-5 text-sm md:text-xl font-semibold">Scores</th>
-              <th className="p-5 text-sm md:text-xl font-semibold">Percentage</th>
-            </tr>
-          </thead>
+import ClassWithStudent from "../ClassWithStudent/ClassWithStudent";
+import TableHeader from "../TableHeader/TableHeader";
 
-          <tbody>
-            <tr className="bg-white/5">
-              <td className="p-5 text-sm md:text-xl" colSpan="4">
-                Class One
-              </td>
-            </tr>
-            <tr className="border-b border-[#7ECEB529]">
-              <td className="p-5 text-sm md:text-xl">1</td>
-              <td className="p-5 text-sm md:text-xl">
-                <div className="flex space-x-3 items-center">
-                  <img className="w-8 h-8" src="./assets/avatar.png" width="32" height="32" alt="John Smith" />
-                  <span className="whitespace-nowrap">John Smith</span>
-                </div>
-              </td>
-              <td className="p-5 text-sm md:text-xl text-center">A+</td>
-              <td className="p-5 text-sm md:text-xl text-center">98%</td>
-            </tr>
-            <tr className="border-b border-[#7ECEB529]">
-              <td className="p-5 text-sm md:text-xl">2</td>
-              <td className="p-5 text-sm md:text-xl">
-                <div className="flex space-x-3 items-center">
-                  <img className="w-8 h-8" src="./assets/avatar.png" width="32" height="32" alt="John Smith" />
-                  <span className="whitespace-nowrap">John Smith</span>
-                </div>
-              </td>
-              <td className="p-5 text-sm md:text-xl text-center">A+</td>
-              <td className="p-5 text-sm md:text-xl text-center">98%</td>
-            </tr>
-            <tr className="border-b border-[#7ECEB529]">
-              <td className="p-5 text-sm md:text-xl">3</td>
-              <td className="p-5 text-sm md:text-xl">
-                <div className="flex space-x-3 items-center">
-                  <img className="w-8 h-8" src="./assets/avatar.png" width="32" height="32" alt="John Smith" />
-                  <span className="whitespace-nowrap">John Smith</span>
-                </div>
-              </td>
-              <td className="p-5 text-sm md:text-xl text-center">A+</td>
-              <td className="p-5 text-sm md:text-xl text-center">98%</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+export default function Table() {
+  const allClasses = [
+    {
+      className: "Class One",
+      students: [
+        { ID: 1, Name: "Alice", Scores: 420, Percentage: 84 },
+        { ID: 2, Name: "Bob", Scores: 380, Percentage: 76 },
+        { ID: 3, Name: "Charlie", Scores: 450, Percentage: 90 },
+        { ID: 4, Name: "David", Scores: 400, Percentage: 80 },
+        { ID: 5, Name: "Eva", Scores: 470, Percentage: 94 },
+      ],
+    },
+    {
+      className: "Class Two",
+      students: [
+        { ID: 1, Name: "Farah", Scores: 430, Percentage: 86 },
+        { ID: 2, Name: "George", Scores: 390, Percentage: 78 },
+        { ID: 3, Name: "Harry", Scores: 410, Percentage: 82 },
+        { ID: 4, Name: "Isla", Scores: 460, Percentage: 92 },
+        { ID: 5, Name: "Jake", Scores: 420, Percentage: 84 },
+      ],
+    },
+    {
+      className: "Class Three",
+      students: [
+        { ID: 1, Name: "Katherine", Scores: 450, Percentage: 90 },
+        { ID: 2, Name: "Leo", Scores: 400, Percentage: 80 },
+        { ID: 3, Name: "Mia", Scores: 470, Percentage: 94 },
+        { ID: 4, Name: "Nathan", Scores: 380, Percentage: 76 },
+        { ID: 5, Name: "Olivia", Scores: 430, Percentage: 86 },
+      ],
+    },
+    {
+      className: "Class Four",
+      students: [
+        { ID: 1, Name: "Peter", Scores: 390, Percentage: 78 },
+        { ID: 2, Name: "Quincy", Scores: 410, Percentage: 82 },
+        { ID: 3, Name: "Riley", Scores: 460, Percentage: 92 },
+        { ID: 4, Name: "Sophia", Scores: 420, Percentage: 84 },
+        { ID: 5, Name: "Thomas", Scores: 440, Percentage: 88 },
+      ],
+    },
+    {
+      className: "Class Five",
+      students: [
+        { ID: 1, Name: "Uma", Scores: 450, Percentage: 90 },
+        { ID: 2, Name: "Violet", Scores: 400, Percentage: 80 },
+        { ID: 3, Name: "William", Scores: 470, Percentage: 94 },
+        { ID: 4, Name: "Xander", Scores: 390, Percentage: 78 },
+        { ID: 5, Name: "Yasmine", Scores: 410, Percentage: 82 },
+      ],
+    },
+  ];
+
+  return (
+    <div className="max-w-[848px] mx-auto overflow-auto text-white">
+      <table className="w-full">
+        <thead>
+          <TableHeader></TableHeader>
+        </thead>
+        <ClassWithStudent allClasses={allClasses}></ClassWithStudent>
+      </table>
     </div>
   );
 }
