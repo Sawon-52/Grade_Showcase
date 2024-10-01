@@ -1,4 +1,6 @@
 # Grade Showcasing Landing Page
+### Live Demo
+[Live Demo](https://grade-showcase-five.vercel.app/)
 
 This project is a simple grade showcasing landing page built using **React**. It demonstrates how to effectively structure components in React by passing fake data as props to different components. The page is styled using **Tailwind CSS** for a clean and responsive design.
 
